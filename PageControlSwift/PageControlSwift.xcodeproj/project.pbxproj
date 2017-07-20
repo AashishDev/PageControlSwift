@@ -304,7 +304,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PageControlSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Crmnext.PageControlSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Test.PageControlSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PageControlSwift/PageControlSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -319,7 +319,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PageControlSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Crmnext.PageControlSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Test.PageControlSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PageControlSwift/PageControlSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -345,6 +345,7 @@
 				175080451F2076F400EBBFFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
