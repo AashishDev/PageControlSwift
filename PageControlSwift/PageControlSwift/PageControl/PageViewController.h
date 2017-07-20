@@ -11,7 +11,7 @@
 
 @class ContentViewController, UIPrintInteractionController;
 
-@interface PageViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource> {
+@interface PageViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource,backButtonDelegate> {
     
     UIPageViewController *thePageViewController;
     ContentViewController *contentViewController;

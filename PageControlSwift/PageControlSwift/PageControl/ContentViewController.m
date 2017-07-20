@@ -40,6 +40,18 @@
     [pdfScrollView setPDFPage:PDFPage];
     [self.view addSubview:pdfScrollView];
     
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:self
+               action:@selector(aMethod:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Back" forState:UIControlStateNormal];
+    button.frame = CGRectMake(8.0, 25.0, 50.0, 30.0);
+    button.backgroundColor =[UIColor orangeColor];
+    button.titleLabel.textColor = [UIColor whiteColor];
+    [self.view addSubview:button];
+    
+    
     pdfScrollView.delegate = self;
     pdfScrollView.minimumZoomScale = MINZOOMSCALE;
     pdfScrollView.maximumZoomScale = MAXZOOMSCALE;
@@ -50,6 +62,14 @@
     pdfScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
 }
+
+
+-(void)aMethod:(UIButton *)sender{
+   
+    [self.delegate backButtonClicked];
+    NSLog(@"Clicked");
+}
+
 
 -(void)dealloc {
     

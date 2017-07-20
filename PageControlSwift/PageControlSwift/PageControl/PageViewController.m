@@ -86,6 +86,8 @@
     
 }
 
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -109,6 +111,7 @@
     thePageViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     contentViewController = [[ContentViewController alloc] initWithPDF:PDFDocument];
+    contentViewController.delegate = self;
     contentViewController.page = [modelArray objectAtIndex:0];
     NSArray *viewControllers = [NSArray arrayWithObject:contentViewController];
     [thePageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
@@ -118,9 +121,14 @@
     thePageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [thePageViewController didMoveToParentViewController:self];
         
-    self.view.backgroundColor = [UIColor underPageBackgroundColor];
-            
+    //self.view.backgroundColor = [UIColor underPageBackgroundColor];
 }
+
+- (void)backButtonClicked{
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 -(void)dealloc {
         

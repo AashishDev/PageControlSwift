@@ -9,7 +9,10 @@
 #import "PDFScrollView.h"
 
 @class PDFScrollView;
-
+@protocol backButtonDelegate <NSObject>
+@optional
+- (void)backButtonClicked;
+@end
 @interface ContentViewController : UIViewController <UIScrollViewDelegate> {
     
     CGPDFDocumentRef thePDF;
@@ -18,7 +21,7 @@
 }
 
 -(id)initWithPDF:(CGPDFDocumentRef)pdf;
-
+@property (nonatomic, weak) id <backButtonDelegate> delegate;
 @property (nonatomic, strong) NSString *page;
 
 @end
